@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: var(--font-inter), sans-serif;
+  --font-sans: var(--font-arimo), sans-serif;
+
+  --color-primary: #1f5684;
+  --color-secondary: #d8ad5a;
+
+  --color-background: #f4f6f8;
+  --color-surface: #d1d5db;
+  --color-foreground: #030303;
+}
+
+body {
+  @apply bg-background text-foreground font-sans antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-heading;
+}
+
+.btn {
+  @apply cursor-pointer bg-gradient-to-r from-indigo-600 to-[#8A7DFF];
+}
