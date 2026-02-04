@@ -4,7 +4,7 @@ import {
   MenuIcon,
   XIcon,
   ChevronDown,
-  PhoneCall,
+  Phone,
   FileTextIcon,
   ImageUpIcon,
   FileVideo,
@@ -48,9 +48,9 @@ export default function Navbar() {
 
           <Link
             href="/"
-            className="hidden rounded-full btn-primary px-8 py-2.5 text-lg text-white transition hover:opacity-90 md:inline-block"
+            className="flex flex-row items-center gap-2 rounded-full btn-primary px-8 py-2.5 text-lg text-white transition hover:opacity-90"
           >
-            Hubungi
+            <Phone className="size-5" /> Hubungi Kami
           </Link>
 
           {/* mobile menu */}
