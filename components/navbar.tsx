@@ -1,26 +1,27 @@
 "use client";
 
-import {
-  MenuIcon,
-  XIcon,
-  ChevronDown,
-  Phone,
-  FileTextIcon,
-  ImageUpIcon,
-  FileVideo,
-  AudioLines,
-  LightbulbIcon,
-} from "lucide-react";
+import { MenuIcon, XIcon, ChevronDown, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import logo from "@/app/alhamra-logo.png";
 
+interface SubLink {
+  name: string;
+  href: string;
+}
+
+interface NavLink {
+  name: string;
+  href: string;
+  subLinks?: SubLink[];
+}
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
-  const links = [
+  const links: NavLink[] = [
     { name: "Tentang Kami", href: "#tentang-kami" },
     { name: "Mengapa Kami Berbeda", href: "#berbeda" },
     { name: "Bagaimana Kami Bekerja", href: "#bekerja" },
