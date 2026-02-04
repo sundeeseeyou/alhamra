@@ -1,4 +1,9 @@
-export default function SectionTitle({ title, subtitle }) {
+interface SectionTitleProps {
+  title: string;
+  subtitle: string;
+}
+
+export default function SectionTitle({ title, subtitle }: SectionTitleProps) {
   return (
     <div className="flex flex-col items-center justify-center">
       <h2 className="text-center text-2xl font-semibold">{title}</h2>

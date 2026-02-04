@@ -1,4 +1,5 @@
 import { StarIcon } from "lucide-react";
+import SectionTitle from "@/components/section-title";
 
 export default function OurTestimonialSection() {
   const data = [
@@ -72,7 +73,7 @@ export default function OurTestimonialSection() {
             className="w-full max-w-88 space-y-4 rounded-md border border-gray-200 bg-white p-5 text-gray-500 transition-all duration-300 hover:-translate-y-1"
           >
             <div className="flex gap-1">
-              {...Array(item.rating)
+              {Array(item.rating)
                 .fill("")
                 .map((_, index) => (
                   <StarIcon
