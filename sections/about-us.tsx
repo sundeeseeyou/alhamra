@@ -27,9 +27,9 @@ export default function AboutUs() {
 
           {/* Text Side */}
           <div className="w-full md:w-1/2 mt-6 md:mt-0">
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary">
+            <span className="text-[10px] md:text-sm font-bold uppercase tracking-[0.2em] text-primary">
               {AboutUsContent.label}
-            </p>
+            </span>
             <h2 className="mt-2 text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 leading-tight">
               {AboutUsContent.title}
             </h2>

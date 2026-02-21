@@ -11,17 +11,12 @@
   --color-surface: #d1d5db;
   --color-foreground: #030303;
 
-  @keyframes zoom-in {
-    0% {
-      transform: scale(0.8);
-      opacity: 0;
+  @keyframes zoom-out {
+    from {
+      transform: scale(1.15);
     }
-    50% {
-      transform: scale(1.05);
-    }
-    100% {
+    to {
       transform: scale(1);
-      opacity: 1;
     }
   }
 }
@@ -62,7 +57,11 @@
 
 body {
   @apply bg-background text-foreground font-sans antialiased;
+}
+
+p {
   font-size: var(--fluid-base);
+  @apply leading-relaxed;
 }
 
 h1,
@@ -72,19 +71,6 @@ h4,
 h5,
 h6 {
   @apply font-heading;
-}
-
-h1 {
-  font-size: var(--fluid-h1);
-}
-h2 {
-  font-size: var(--fluid-h2);
-}
-h3 {
-  font-size: var(--fluid-h3);
-}
-h4 {
-  font-size: var(--fluid-h4);
 }
 
 /* Utility classes — use these in components */
@@ -119,4 +105,8 @@ h4 {
 
 .btn-primary {
   background-color: var(--color-primary);
+}
+
+.animate-zoom-out {
+  animation: zoom-out 10s ease-out forwards;
 }

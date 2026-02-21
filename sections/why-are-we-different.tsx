@@ -1,4 +1,4 @@
-import { ArrowUpRight, Target, Network, TrendingUp } from "lucide-react";
+import { Target, Network, TrendingUp } from "lucide-react";
 import { WhyWeDifferentContent } from "@/data/content";
 import { Decor4 } from "@/components/decorations";
 
@@ -14,9 +14,9 @@ export default function WhyAreWeDifferent() {
         <div className="flex flex-col md:flex-row items-center gap-10 md:gap-14 lg:gap-20">
           {/* Text Side (Left on Desktop) */}
           <div className="w-full md:w-1/2 mt-6 md:mt-0">
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary">
+            <span className="text-[10px] md:text-sm font-bold uppercase tracking-[0.2em] text-primary">
               {WhyWeDifferentContent.label}
-            </p>
+            </span>
             <h2 className="mt-2 text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 leading-tight">
               {WhyWeDifferentContent.title}
             </h2>
@@ -25,7 +25,7 @@ export default function WhyAreWeDifferent() {
               <div className="w-6 h-[3px] rounded-full bg-secondary" />
             </div>
 
-            <div className="flex flex-col mt-10 gap-4">
+            <div className="flex flex-col mt-10 gap-6">
               {WhyWeDifferentContent.listItems.map((item, i) => {
                 const Icon = icons[i] || Target;
                 return (
@@ -47,11 +47,6 @@ export default function WhyAreWeDifferent() {
                 );
               })}
             </div>
-
-            <button className="mt-12 inline-flex items-center gap-2 rounded-full btn-primary py-3 px-8 text-white font-medium hover:opacity-90 hover:gap-3 hover:cursor-pointer active:scale-[0.98] transition-all duration-100 ease-in-out">
-              <ArrowUpRight className="size-6" />
-              <span>{WhyWeDifferentContent.ctaButton}</span>
-            </button>
           </div>
 
           {/* Image Side (Right on Desktop) */}
