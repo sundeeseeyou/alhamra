@@ -3,13 +3,15 @@ import HeroSection from "@/sections/hero-section";
 import Newsletter from "@/sections/newsletter";
 import OurLatestCreations from "@/sections/our-latest-creations";
 import OurTestimonialSection from "@/sections/our-testimonials-section";
-import WhatWeDoSection from "@/sections/what-we-do-section";
+import AboutUs from "@/sections/about-us";
+import WhyAreWeDifferent from "@/sections/why-are-we-different";
 
 export default function Page() {
   return (
     <main className="w-full mx-auto">
       <HeroSection />
-      <WhatWeDoSection />
+      <AboutUs />
+      <WhyAreWeDifferent />
       <OurLatestCreations />
       <OurTestimonialSection />
       <FaqSection />

@@ -4,46 +4,13 @@ import {
   TwitterIcon,
   YoutubeIcon,
 } from "lucide-react";
+import { footerContent } from "@/data/content";
 
 export default function Footer() {
-  const data = [
-    {
-      title: "Company",
-      links: [
-        { title: "About us", href: "#about-us" },
-        { title: "Our vision", href: "#our-vision" },
-        { title: "Community", href: "#community" },
-        { title: "Careers", href: "#careers" },
-        { title: "Term & conditions", href: "#term-and-conditions" },
-        { title: "Privacy", href: "#privacy" },
-      ],
-    },
-    {
-      title: "Account",
-      links: [
-        { title: "Settings", href: "#settings" },
-        { title: "Refund policy", href: "#refund-policy" },
-        { title: "Affiliates", href: "#affiliates" },
-        { title: "Gift cards", href: "#gift-cards" },
-      ],
-    },
-    {
-      title: "Contact",
-      links: [
-        { title: "Contact us", href: "#contact-us" },
-        { title: "Instagram", href: "#instagram" },
-        { title: "Linkedin", href: "#linkedin" },
-        { title: "Github", href: "#github" },
-      ],
-    },
-  ];
   return (
     <footer className="px-4 md:px-16 lg:px-24 text-[13px] mt-32 text-gray-500">
       <div className="flex flex-wrap items-start min-md:justify-between gap-10 md:gap-[60px]">
-        <a
-          href="https://prebuiltui.com?utm_source=material"
-          className="max-w-80"
-        >
+        <a href="/" className="max-w-80">
           <svg
             width="30"
             height="33"
@@ -73,7 +40,7 @@ export default function Footer() {
             </defs>
           </svg>
         </a>
-        {data.map((item, index) => (
+        {footerContent.columns.map((item, index) => (
           <div key={index} className="max-w-80">
             <p className="font-semibold text-gray-800">{item.title}</p>
             <ul className="mt-5 space-y-2">
@@ -92,32 +59,31 @@ export default function Footer() {
         ))}
       </div>
       <div className="flex flex-col md:flex-row py-7 mt-12 border-gray-200 md:justify-between max-md:items-center border-t max-md:text-center gap-2 items-end">
-        <p className="text-center">
-          © 2025{" "}
-          <a href="https://prebuiltui.com?utm_source=material">
-            PrebuiltUI, All rights reserved.
-          </a>
-        </p>
+        <p className="text-center">{footerContent.copyright}</p>
         <div className="flex items-center gap-4">
           <a
-            href="https://dribbble.com/prebuiltui"
+            href={footerContent.socials.dribbble}
             target="_blank"
             rel="noreferrer"
           >
             <DribbbleIcon className="size-5 text-gray-400 hover:text-indigo-500" />
           </a>
           <a
-            href="https://www.linkedin.com/company/prebuiltui"
+            href={footerContent.socials.linkedin}
             target="_blank"
             rel="noreferrer"
           >
             <LinkedinIcon className="size-5 text-gray-400 hover:text-indigo-500" />
           </a>
-          <a href="https://x.com/prebuiltui" target="_blank" rel="noreferrer">
+          <a
+            href={footerContent.socials.twitter}
+            target="_blank"
+            rel="noreferrer"
+          >
             <TwitterIcon className="size-5 text-gray-400 hover:text-indigo-500" />
           </a>
           <a
-            href="https://www.youtube.com/@prebuiltui"
+            href={footerContent.socials.youtube}
             target="_blank"
             rel="noreferrer"
           >

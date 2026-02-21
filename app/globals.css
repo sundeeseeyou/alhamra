@@ -26,8 +26,43 @@
   }
 }
 
+/* ============================================================
+   Fluid Typography System
+   ============================================================
+   Viewport range: 375px (mobile) → 1280px (desktop)
+   Formula: clamp(min, preferred, max)
+   preferred = intercept(rem) + slope(vw)
+   ============================================================ */
+
+:root {
+  /* Paragraph / Body — 15px → 18px */
+  --fluid-base: clamp(0.9375rem, 0.86rem + 0.331vw, 1.125rem);
+
+  /* Small text — 13px → 14px */
+  --fluid-sm: clamp(0.8125rem, 0.79rem + 0.11vw, 0.875rem);
+
+  /* Large text — 18px → 20px */
+  --fluid-lg: clamp(1.125rem, 1.07rem + 0.22vw, 1.25rem);
+
+  /* H4 — 20px → 24px */
+  --fluid-h4: clamp(1.25rem, 1.14rem + 0.44vw, 1.5rem);
+
+  /* H3 — 22px → 28px */
+  --fluid-h3: clamp(1.375rem, 1.21rem + 0.66vw, 1.75rem);
+
+  /* H2 — 24px → 36px */
+  --fluid-h2: clamp(1.5rem, 1.17rem + 1.33vw, 2.25rem);
+
+  /* H1 — 30px → 48px */
+  --fluid-h1: clamp(1.875rem, 1.38rem + 1.99vw, 3rem);
+
+  /* Display (Hero) — 36px → 60px */
+  --fluid-display: clamp(2.25rem, 1.59rem + 2.65vw, 3.75rem);
+}
+
 body {
   @apply bg-background text-foreground font-sans antialiased;
+  font-size: var(--fluid-base);
 }
 
 h1,
@@ -37,6 +72,45 @@ h4,
 h5,
 h6 {
   @apply font-heading;
+}
+
+h1 {
+  font-size: var(--fluid-h1);
+}
+h2 {
+  font-size: var(--fluid-h2);
+}
+h3 {
+  font-size: var(--fluid-h3);
+}
+h4 {
+  font-size: var(--fluid-h4);
+}
+
+/* Utility classes — use these in components */
+.fluid-display {
+  font-size: var(--fluid-display);
+}
+.fluid-h1 {
+  font-size: var(--fluid-h1);
+}
+.fluid-h2 {
+  font-size: var(--fluid-h2);
+}
+.fluid-h3 {
+  font-size: var(--fluid-h3);
+}
+.fluid-h4 {
+  font-size: var(--fluid-h4);
+}
+.fluid-lg {
+  font-size: var(--fluid-lg);
+}
+.fluid-base {
+  font-size: var(--fluid-base);
+}
+.fluid-sm {
+  font-size: var(--fluid-sm);
 }
 
 .btn {

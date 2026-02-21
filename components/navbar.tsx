@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import logo from "@/app/alhamra-logo.png";
+import { navbarContent } from "@/data/content";
 
 interface SubLink {
   name: string;
@@ -21,11 +22,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
-  const links: NavLink[] = [
-    { name: "Tentang Kami", href: "#tentang-kami" },
-    { name: "Mengapa Kami Berbeda", href: "#berbeda" },
-    { name: "Bagaimana Kami Bekerja", href: "#bekerja" },
-  ];
+  const links: NavLink[] = navbarContent.links;
 
   return (
     <>
@@ -51,7 +48,7 @@ export default function Navbar() {
             href="/"
             className="flex flex-row items-center gap-2 rounded-full btn-primary px-8 py-2.5 text-lg text-white transition hover:opacity-90"
           >
-            <Phone className="size-5" /> Hubungi Kami
+            <Phone className="size-5" /> {navbarContent.ctaButton}
           </Link>
 
           {/* mobile menu */}
@@ -116,7 +113,7 @@ export default function Navbar() {
           className="rounded-full btn px-8 py-2.5 font-medium text-white transition hover:opacity-90"
           onClick={() => setIsOpen(false)}
         >
-          Hubungi
+          {navbarContent.mobileCtaButton}
         </Link>
 
         <button
