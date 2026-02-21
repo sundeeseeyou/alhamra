@@ -5,7 +5,17 @@
 // Setiap section punya object sendiri supaya mudah dicari.
 // ============================================================
 
-import image from "next/image";
+import {
+  HeartHandshake,
+  Users,
+  Newspaper,
+  ClockAlert,
+  ChartColumnIncreasing,
+  MessageCircleWarning,
+  Scale,
+  Package,
+  SquareSigma,
+} from "lucide-react";
 
 // ----- NAVBAR -----
 export const navbarContent = {
@@ -27,9 +37,9 @@ export const heroContent = {
   imageAlt: "Business background",
 };
 
-// ----- WHAT WE DO SECTION -----
+// ----- ABOUT US SECTION -----
 export const AboutUsContent = {
-  label: "Tentang Kami",
+  label: "About",
   title: "Tentang Kami",
   paragraphs: [
     "Kami adalah layanan perdagangan B2B yang menyediakan produk dan jasa dalam satu ekosistem pertumbuhan usaha yang membangun nilai lebih dari setiap transaksi, kemudian menciptakan hingga memperkuat pertumbuhan usaha bagi setiap partner.",
@@ -42,28 +52,92 @@ export const AboutUsContent = {
 
 // ----- WHY WE DIFFERENT SECTION -----
 export const WhyWeDifferentContent = {
-  label: "Perbedaan Kami",
+  label: "Why Choose Us",
   title: "Perbedaan Kami",
   listItems: [
     {
       title: "Pendekatan Mendalam",
       items:
         "Kami telah mengembangkan pendekatan unik kami New-Generation of Market Centric untuk mencapai hasil signifikan bagi partner kami yang merepresentasikan setiap industri mereka.",
+      icons: HeartHandshake,
     },
     {
       title: "Budaya Konektivitas",
       items:
         "Kami berorientasi pada ekosistem yang saling terintegrasi untuk pemenuhan kebutuhan setiap partner, dengan membangun jejaring dari tingkat bawah ke atas.",
+      icons: Users,
     },
     {
       title: "Orientasi Bertumbuh",
       items:
         "Kami bekerja dengan para partner ambisius yang berani mengambil resiko dan meninggalkan ketidakpastian untuk bertumbuh.",
+      icons: ChartColumnIncreasing,
     },
   ],
   ctaButton: "Pelajari Lebih",
   image:
     "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&auto=format&fit=crop",
+  imageAlt: "Al-Hamra team collaboration",
+};
+
+// --------- HOW WE WORK -----
+export const HowWeWorkContent = {
+  label: "How We Work",
+  title: "Cara Kami Bekerja",
+  loopItems: [
+    {
+      title: "Urgency",
+      items: "Kebutuhan yang harus dipenuhi",
+      icon: ClockAlert,
+    },
+    {
+      title: "Awareness",
+      items: "Friksi yang kerap dirasakan dan terjadi",
+      icon: MessageCircleWarning,
+    },
+    {
+      title: "Berita terkini",
+      items: "Analisis Snapshot dari NGMC",
+      icon: Newspaper,
+    },
+    {
+      title: "Consideration",
+      items: "Menjadi tertarik dan kesepakatan",
+      icon: Scale,
+    },
+    {
+      title: "Conversion",
+      items: "Proses transaksi → Mendapat produk",
+      icon: Package,
+    },
+    {
+      title: "Evaluate",
+      items: "NGMC produk dan visual tahap perjalanan kerjasama",
+      icon: SquareSigma,
+    },
+  ],
+  listTitle: "New Generation of Market Centric",
+  listItems: [
+    {
+      title: "Market Intelligence",
+      items:
+        "Kami telah mengembangkan pendekatan unik kami New-Generation of Market Centric untuk mencapai hasil signifikan bagi partner kami yang merepresentasikan setiap industri mereka.",
+    },
+    {
+      title: "Market Outlook",
+      items:
+        "Kami berorientasi pada ekosistem yang saling terintegrasi untuk pemenuhan kebutuhan setiap partner, dengan membangun jejaring dari tingkat bawah ke atas.",
+    },
+    {
+      title: "Market Shaping",
+      items:
+        "Kami bekerja dengan para partner ambisius yang berani mengambil resiko dan meninggalkan ketidakpastian untuk bertumbuh.",
+    },
+  ],
+  listDescription:
+    "Melalui 3 komponen utama dan indikator turunannya. Kami memberikan analisa mendalam yang membantu melihat visibilitas dan mematangkan keputusan tanpa intervensi keputusan",
+  ctaButton: "Pelajari Lebih",
+  image: "/assets/alhamra-loop.png",
   imageAlt: "Al-Hamra team collaboration",
 };
 

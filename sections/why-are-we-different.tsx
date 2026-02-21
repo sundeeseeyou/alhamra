@@ -1,8 +1,5 @@
-import { Target, Network, TrendingUp } from "lucide-react";
 import { WhyWeDifferentContent } from "@/data/content";
 import { Decor4 } from "@/components/decorations";
-
-const icons = [Target, Network, TrendingUp];
 
 export default function WhyAreWeDifferent() {
   return (
@@ -27,12 +24,12 @@ export default function WhyAreWeDifferent() {
 
             <div className="flex flex-col mt-10 gap-6">
               {WhyWeDifferentContent.listItems.map((item, i) => {
-                const Icon = icons[i] || Target;
+                const Icon = item.icons;
                 return (
                   <div key={i} className="group flex items-start gap-4">
                     {/* Icon Container */}
-                    <div className="flex shrink-0 items-center justify-center rounded-full border-[3px] border-primary size-10 text-primary">
-                      <Icon className="size-5 stroke-[2.5px]" />
+                    <div className="flex shrink-0 items-center justify-center rounded-full border-[3px] border-primary size-12 text-primary">
+                      <Icon className="size-6 stroke-[2.5px]" />
                     </div>
 
                     <div>

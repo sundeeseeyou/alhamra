@@ -3,6 +3,7 @@ import HeroSection from "@/sections/hero-section";
 import Newsletter from "@/sections/newsletter";
 import AboutUs from "@/sections/about-us";
 import WhyAreWeDifferent from "@/sections/why-are-we-different";
+import HowWeWork from "@/sections/how-we-work";
 
 export default function Page() {
   return (
@@ -10,6 +11,7 @@ export default function Page() {
       <HeroSection />
       <AboutUs />
       <WhyAreWeDifferent />
+      <HowWeWork />
       <FaqSection />
       <Newsletter />
     </main>
