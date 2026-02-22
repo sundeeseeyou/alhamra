@@ -245,9 +245,9 @@ export default function ContactSection() {
                       ref={recaptchaRef}
                       sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
                     />
-                    <p className="text-[10px] text-slate-400">
+                    {/* <p className="text-[10px] text-slate-400">
                       Input Site Key dapat dikelola di file .env.local
-                    </p>
+                    </p> */}
                   </div>
 
                   {/* Submit Button */}
