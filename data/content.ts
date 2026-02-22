@@ -116,7 +116,7 @@ export const HowWeWorkContent = {
       icon: SquareSigma,
     },
   ],
-  listTitle: "New Generation of Market Centric",
+  listTitle: "New Generation of Market Centric (NGMC)",
   listItems: [
     {
       title: "Market Intelligence",
@@ -139,6 +139,68 @@ export const HowWeWorkContent = {
   ctaButton: "Pelajari Lebih",
   image: "/assets/alhamra-loop.png",
   imageAlt: "Al-Hamra team collaboration",
+};
+
+// ----- VISION & MISSION SECTION -----
+export const VisionMissionContent = {
+  label: "Our Purpose",
+  title: "Visi & Misi Kami",
+  vision: {
+    title: "Visi",
+    content: "Terhubung secara lokal, berdampak secara global.",
+  },
+  mission: {
+    title: "Misi",
+    content:
+      "Melakukan perdagangan B2B secara analitik dan membangun kepercayaan pada kekuatan lokal yang tidak hanya transaksional.",
+  },
+};
+
+// ----- CTA SECTION -----
+export const CTAContent = {
+  title: "Siap untuk melangkah lebih jauh bersama Al-Hamra?",
+  subtitle:
+    "Hubungi kami sekarang untuk konsultasi mendalam mengenai strategi pertumbuhan usaha Anda.",
+  ctaButton: "Hubungi Kami Sekarang",
+  href: "#hubungi",
+};
+
+// ----- CONTACT SECTION -----
+export const contactContent = {
+  label: "Contact Us",
+  title: "Hubungi Kami",
+  subtitle:
+    "Punya pertanyaan atau ingin bermitra? Silakan isi formulir di bawah ini dan tim kami akan segera menghubungi Anda.",
+  fields: {
+    fullName: {
+      label: "Full Name",
+      placeholder: "Masukkan nama lengkap Anda",
+    },
+    company: {
+      label: "Company / Usaha",
+      placeholder: "Nama perusahaan atau jenis usaha",
+    },
+    email: {
+      label: "Email",
+      placeholder: "alamat@email.com",
+    },
+    whatsapp: {
+      label: "No WhatsApp",
+      placeholder: "Contoh: 081234567890",
+    },
+    purpose: {
+      label: "Jenis Keperluan",
+      options: [
+        { label: "Kemitraan", value: "kemitraan" },
+        { label: "Pertanyaan Umum", value: "pertanyaan_umum" },
+      ],
+    },
+    message: {
+      label: "Isi Pesan",
+      placeholder: "Ceritakan kebutuhan atau pertanyaan Anda...",
+    },
+  },
+  submitButton: "Kirim Pesan",
 };
 
 // ----- FAQ -----
@@ -191,42 +253,9 @@ export const newsletterContent = {
 
 // ----- FOOTER -----
 export const footerContent = {
-  columns: [
-    {
-      title: "Company",
-      links: [
-        { title: "About us", href: "#about-us" },
-        { title: "Our vision", href: "#our-vision" },
-        { title: "Community", href: "#community" },
-        { title: "Careers", href: "#careers" },
-        { title: "Term & conditions", href: "#term-and-conditions" },
-        { title: "Privacy", href: "#privacy" },
-      ],
-    },
-    {
-      title: "Account",
-      links: [
-        { title: "Settings", href: "#settings" },
-        { title: "Refund policy", href: "#refund-policy" },
-        { title: "Affiliates", href: "#affiliates" },
-        { title: "Gift cards", href: "#gift-cards" },
-      ],
-    },
-    {
-      title: "Contact",
-      links: [
-        { title: "Contact us", href: "#contact-us" },
-        { title: "Instagram", href: "#instagram" },
-        { title: "Linkedin", href: "#linkedin" },
-        { title: "Github", href: "#github" },
-      ],
-    },
-  ],
-  copyright: "© 2025 Al-Hamra, All rights reserved.",
   socials: {
-    dribbble: "#",
+    instagram: "#",
     linkedin: "#",
-    twitter: "#",
     youtube: "#",
   },
 };

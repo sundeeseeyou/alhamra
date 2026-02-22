@@ -86,7 +86,7 @@ export default function HowWeWork() {
           {/* Right Side: NGMC List Items */}
           <div className="w-full lg:w-1/2 flex flex-col justify-center text-start gap-6 md:gap-8">
             <div className="flex flex-col gap-3">
-              <h3 className="text-xl md:text-3xl font-bold text-slate-800">
+              <h3 className="text-md md:text-3xl font-bold text-slate-700">
                 {HowWeWorkContent.listTitle}
               </h3>
               <p className="text-slate-600 text-sm md:text-base leading-relaxed max-w-xl">
@@ -98,13 +98,13 @@ export default function HowWeWork() {
               {HowWeWorkContent.listItems.map((list, idx) => (
                 <div
                   key={idx}
-                  className="flex gap-4 p-5 rounded-2xl bg-white border border-slate-100 transition-all duration-500 group"
+                  className="flex gap-4 p-5 rounded-2xl bg-surface/20 border border-slate-100 transition-all duration-500 group"
                 >
-                  <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary font-bold text-base md:text-lg transition-all duration-300">
+                  <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full border-3 border-primary flex items-center justify-center text-primary font-bold text-base md:text-lg transition-all duration-300">
                     {idx + 1}
                   </div>
                   <div className="flex flex-col gap-1">
-                    <h5 className="text-base md:text-xl font-bold text-slate-800">
+                    <h5 className="text-sm md:text-xl font-bold text-slate-800">
                       {list.title}
                     </h5>
                     <p className="text-sm md:text-sm text-slate-600 leading-relaxed">

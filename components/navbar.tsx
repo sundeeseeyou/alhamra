@@ -45,7 +45,7 @@ export default function Navbar() {
           </div>
 
           <Link
-            href="/"
+            href="#hubungi"
             className="flex flex-row items-center gap-2 rounded-full btn-primary px-8 py-2.5 text-lg text-white transition hover:opacity-90"
           >
             <Phone className="size-5" /> {navbarContent.ctaButton}
