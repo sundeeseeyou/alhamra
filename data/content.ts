@@ -170,7 +170,7 @@ export const contactContent = {
   label: "Contact Us",
   title: "Hubungi Kami",
   subtitle:
-    "Punya pertanyaan atau ingin bermitra? Silakan isi formulir di bawah ini dan tim kami akan segera menghubungi Anda.",
+    "Punya pertanyaan atau ingin bermitra? Silakan isi form berikut dan tim kami akan segera menghubungi Anda.",
   fields: {
     fullName: {
       label: "Full Name",

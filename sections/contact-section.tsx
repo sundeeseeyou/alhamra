@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { contactContent } from "@/data/content";
@@ -13,9 +14,6 @@ import {
   CheckCircle2,
   AlertCircle,
 } from "lucide-react";
-
-import { sendContactEmail } from "@/app/actions/send-email";
-
 export default function ContactSection() {
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
@@ -32,7 +30,8 @@ export default function ContactSection() {
     e.preventDefault();
     setStatus("loading");
 
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     const recaptchaValue = recaptchaRef.current?.getValue();
 
     if (!recaptchaValue) {
@@ -41,7 +40,7 @@ export default function ContactSection() {
       return;
     }
 
-    // Basic validation for phone (already handled by handlePhoneChange but good to check length)
+    // Basic validation for phone
     if (phoneNumber.length < 9) {
       alert("Mohon masukkan nomor WhatsApp yang valid.");
       setStatus("idle");
@@ -49,12 +48,20 @@ export default function ContactSection() {
     }
 
     try {
+      // Menambahkan g-recaptcha-response sesuai standar Formspree/reCAPTCHA
       formData.append("g-recaptcha-response", recaptchaValue);
-      const result = await sendContactEmail(formData);
 
-      if (result.success) {
+      const response = await fetch("https://formspree.io/f/mgolnbed", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
         setStatus("success");
-        e.currentTarget.reset();
+        form.reset();
         setPhoneNumber("");
       } else {
         setStatus("error");
@@ -105,16 +112,24 @@ export default function ContactSection() {
                   <p className="text-xs text-slate-400 font-medium">
                     Email Kami
                   </p>
-                  <p className="text-slate-800 font-bold">halo@alhamra.id</p>
+                  <Link href="mailto:halo@alhamratnd.com" target="_blank">
+                    <p className="text-slate-800 font-bold">
+                      halo@alhamratnd.com
+                    </p>
+                  </Link>
                 </div>
               </div>
               <div className="flex items-center gap-4 group">
-                <div className="size-12 rounded-full border-[3px] border-secondary flex items-center justify-center text-secondary transition-transform group-hover:scale-110">
+                <div className="size-12 rounded-full border-[3px] border-primary flex items-center justify-center text-primary transition-transform group-hover:scale-110">
                   <Phone className="size-5" />
                 </div>
                 <div>
                   <p className="text-xs text-slate-400 font-medium">WhatsApp</p>
-                  <p className="text-slate-800 font-bold">+62 812-3456-7890</p>
+                  <Link href="https://wa.me/6281779313848" target="_blank">
+                    <p className="text-slate-800 font-bold">
+                      +62 817-7931-3848
+                    </p>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -255,7 +270,7 @@ export default function ContactSection() {
                     <button
                       type="submit"
                       disabled={status === "loading"}
-                      className="w-full md:w-auto px-12 py-4 bg-primary text-white font-bold rounded-full shadow-lg shadow-primary/20 hover:shadow-primary/30 hover:scale-[1.02] active:scale-[0.98] transition-all disabled:opacity-50 disabled:scale-100 flex items-center justify-center gap-3"
+                      className="w-full md:w-auto px-12 py-4 bg-primary text-white font-bold rounded-full shadow-lg shadow-primary/20 hover:shadow-primary/30 hover:scale-[1.02] hover:cursor-pointer active:scale-[0.98] transition-all disabled:opacity-50 disabled:scale-100 flex items-center justify-center gap-3"
                     >
                       {status === "loading" ? (
                         <>
