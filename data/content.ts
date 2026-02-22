@@ -33,8 +33,8 @@ export const heroContent = {
   headline: "Melangkah lebih percaya melalui",
   highlightedText: "New-Generation of Market Centric",
   image:
-    "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2074&auto=format&fit=crop",
-  imageAlt: "Business background",
+    "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop",
+  imageAlt: "Al-Hamra professional team meeting in office",
 };
 
 // ----- ABOUT US SECTION -----
@@ -46,8 +46,8 @@ export const AboutUsContent = {
   ],
   ctaButton: "Pelajari Lebih",
   image:
-    "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&auto=format&fit=crop",
-  imageAlt: "Al-Hamra team collaboration",
+    "https://images.unsplash.com/photo-1664575602276-acd073f104c1?q=80&w=2070&auto=format&fit=crop",
+  imageAlt: "Tim Al-Hamra berkolaborasi di coworking space modern",
 };
 
 // ----- WHY WE DIFFERENT SECTION -----
@@ -76,8 +76,8 @@ export const WhyWeDifferentContent = {
   ],
   ctaButton: "Pelajari Lebih",
   image:
-    "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&auto=format&fit=crop",
-  imageAlt: "Al-Hamra team collaboration",
+    "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop",
+  imageAlt: "Fokus kolaborasi tim profesional di Al-Hamra",
 };
 
 // --------- HOW WE WORK -----
@@ -161,7 +161,7 @@ export const CTAContent = {
   title: "Siap untuk melangkah lebih jauh bersama Al-Hamra?",
   subtitle:
     "Hubungi kami sekarang untuk konsultasi mendalam mengenai strategi pertumbuhan usaha Anda.",
-  ctaButton: "Hubungi Kami Sekarang",
+  ctaButton: "Hubungi Kami",
   href: "#hubungi",
 };
 
@@ -201,54 +201,6 @@ export const contactContent = {
     },
   },
   submitButton: "Kirim Pesan",
-};
-
-// ----- FAQ -----
-export const faqContent = {
-  title: "FAQ's",
-  subtitle:
-    "Looking for answers to your frequently asked questions? Check out our FAQ's section below to find.",
-  items: [
-    {
-      question: "Do I need coding or design experience to use PrebuiltUI?",
-      answer:
-        "Basic coding knowledge (HTML/CSS, Tailwind) helps, but advanced design skills aren't required. You can use components as-is or customize them.",
-    },
-    {
-      question:
-        "What is PrebuiltUI and how does it help developers and designers?",
-      answer:
-        "PrebuiltUI provides ready-to-use, customizable UI components and templates, saving time for developers and designers.",
-    },
-    {
-      question: "Can I use PrebuiltUI components in my existing project?",
-      answer:
-        "Yes, components can be integrated into HTML, React, Next.js, Vue, and other projects using Tailwind CSS.",
-    },
-    {
-      question: "How customizable are the generated components?",
-      answer:
-        "Components are highly customizable with Tailwind utility classes, theming, and structural adjustments.",
-    },
-    {
-      question: "Does PrebuiltUI support team collaboration?",
-      answer:
-        "There's no clear documentation on built-in collaboration features. Check their support for team options.",
-    },
-    {
-      question: "Can I try PrebuiltUI before purchasing a plan?",
-      answer: "Yes, you can try PrebuiltUI with full access to features.",
-    },
-  ],
-};
-
-// ----- NEWSLETTER -----
-export const newsletterContent = {
-  title: "Join Newsletter",
-  subtitle:
-    "A visual collection of our most recent works - each piece crafted with intention, emotion and style.",
-  placeholder: "Enter your email address",
-  ctaButton: "Get Updates",
 };
 
 // ----- FOOTER -----

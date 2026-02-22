@@ -5,7 +5,7 @@ export default function VisionMission() {
   return (
     <section
       id="visi-misi"
-      className="relative w-full px-4 sm:px-6 md:px-12 lg:px-16 py-20 md:py-28 bg-background"
+      className="relative w-full px-4 sm:px-6 md:px-12 lg:px-16 py-12 md:py-28 bg-background"
     >
       {/* Subtle decorations */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">

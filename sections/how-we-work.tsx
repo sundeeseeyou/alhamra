@@ -4,7 +4,7 @@ export default function HowWeWork() {
   return (
     <section
       id="bekerja"
-      className="relative flex flex-col justify-center items-center text-center bg-white w-full px-4 sm:px-6 md:px-12 lg:px-16 py-20 md:py-28"
+      className="relative flex flex-col justify-center items-center text-center bg-white w-full px-4 sm:px-6 md:px-12 lg:px-16 py-12 md:py-28"
     >
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">

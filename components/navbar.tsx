@@ -32,12 +32,12 @@ export default function Navbar() {
             <Image src={logo} alt="logo" width={150} height={30} />
           </Link>
 
-          <div className="hidden items-center gap-16 text-gray-900 md:flex">
+          <div className="hidden items-center gap-8 text-gray-900 md:flex">
             {links.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="transition hover:text-black"
+                className="transition hover:text-primary font-medium"
               >
                 {link.name}
               </Link>
@@ -46,82 +46,59 @@ export default function Navbar() {
 
           <Link
             href="#hubungi"
-            className="flex flex-row items-center gap-2 rounded-full btn-primary px-8 py-2.5 text-lg text-white transition hover:opacity-90"
+            className="hidden md:flex flex-row items-center gap-2 rounded-full btn-primary px-8 py-2.5 text-lg font-bold text-white transition hover:opacity-90"
           >
             <Phone className="size-5" /> {navbarContent.ctaButton}
           </Link>
 
-          {/* mobile menu */}
+          {/* mobile menu toggle */}
           <button
             onClick={() => setIsOpen(true)}
-            className="transition active:scale-90 md:hidden"
+            className="transition active:scale-90 md:hidden p-2"
           >
-            <MenuIcon className="size-6.5" />
+            <MenuIcon className="size-8" />
           </button>
         </nav>
       </header>
 
+      {/* Mobile Off-canvas Menu */}
       <div
-        className={`fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 bg-white/20 text-lg font-medium backdrop-blur-2xl transition duration-300 md:hidden ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+        className={`fixed inset-0 z-[60] flex flex-col bg-white transition-transform duration-500 ease-in-out md:hidden ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
       >
-        {links.map((link) => (
-          <div key={link.name} className="text-center">
-            {link.subLinks ? (
-              <>
-                <button
-                  onClick={() =>
-                    setOpenDropdown(
-                      openDropdown === link.name ? null : link.name,
-                    )
-                  }
-                  className="flex items-center justify-center gap-1 text-gray-800"
-                >
-                  {link.name}
-                  <ChevronDown
-                    className={`size-4 transition-transform ${openDropdown === link.name ? "rotate-180" : ""}`}
-                  />
-                </button>
-                {openDropdown === link.name && (
-                  <div className="mt-2 flex flex-col gap-2 text-left text-sm">
-                    {link.subLinks.map((sub) => (
-                      <Link
-                        key={sub.name}
-                        href={sub.href}
-                        className="block text-gray-600 transition hover:text-black"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {sub.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </>
-            ) : (
-              <Link
-                href={link.href}
-                className="block text-gray-800 transition hover:text-black"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </Link>
-            )}
-          </div>
-        ))}
+        <div className="flex items-center justify-between p-6 border-b">
+          <Link href="/" onClick={() => setIsOpen(false)}>
+            <Image src={logo} alt="logo" width={120} height={24} />
+          </Link>
+          <button
+            onClick={() => setIsOpen(false)}
+            className="p-2 text-slate-800"
+          >
+            <XIcon className="size-8" />
+          </button>
+        </div>
 
-        <Link
-          href="/"
-          className="rounded-full btn px-8 py-2.5 font-medium text-white transition hover:opacity-90"
-          onClick={() => setIsOpen(false)}
-        >
-          {navbarContent.mobileCtaButton}
-        </Link>
+        <div className="flex flex-col gap-6 p-8 text-xl font-semibold">
+          {links.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className="text-slate-800 transition hover:text-primary"
+              onClick={() => setIsOpen(false)}
+            >
+              {link.name}
+            </Link>
+          ))}
 
-        <button
-          onClick={() => setIsOpen(false)}
-          className="rounded-md btn p-2 text-white ring-white active:ring-2"
-        >
-          <XIcon />
-        </button>
+          <Link
+            href="#hubungi"
+            className="mt-4 flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-white transition hover:opacity-90"
+            onClick={() => setIsOpen(false)}
+          >
+            <Phone className="size-5" /> {navbarContent.ctaButton}
+          </Link>
+        </div>
       </div>
     </>
   );

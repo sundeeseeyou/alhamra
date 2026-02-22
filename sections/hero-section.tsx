@@ -3,7 +3,7 @@ import { heroContent } from "@/data/content";
 
 export default function HeroSection() {
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-[45rem] overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center min-h-[80vh] md:min-h-[45rem] overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0 w-full h-full">
         <Image
@@ -14,17 +14,19 @@ export default function HeroSection() {
           priority
         />
         {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/65"></div>
       </div>
 
       {/* Content */}
-      <div className="flex flex-col lg:max-w-[1600px] w-full items-start justify-center z-10 px-6">
-        <h1 className="text-6xl/tight md:text-[4rem]/tight w-5xl text-start font-bold text-white">
-          {heroContent.headline}{" "}
-          <span className="inline-block bg-gradient-to-r from-secondary to-[#887100] bg-clip-text text-transparent">
-            {heroContent.highlightedText}
-          </span>
-        </h1>
+      <div className="relative z-10 mx-auto max-w-[1440px] w-full px-6 md:px-12 lg:px-16">
+        <div className="max-w-4xl flex flex-col gap-6">
+          <h1 className="text-4xl/tight sm:text-5xl/tight md:text-[4rem]/tight text-start font-bold text-white">
+            {heroContent.headline}{" "}
+            <span className="inline-block bg-gradient-to-r from-secondary to-[#FFD700] bg-clip-text text-transparent">
+              {heroContent.highlightedText}
+            </span>
+          </h1>
+        </div>
       </div>
     </section>
   );

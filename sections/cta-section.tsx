@@ -21,7 +21,7 @@ export default function CTASection() {
           </p>
           <Link
             href={CTAContent.href}
-            className="flex flex-row items-center gap-2 rounded-full bg-secondary px-8 py-2.5 text-lg text-slate-900 transition hover:opacity-90"
+            className="flex flex-row items-center gap-2 rounded-full bg-secondary px-8 py-2.5 text-lg font-bold text-slate-900 transition hover:opacity-90"
           >
             <Phone className="size-5" /> {CTAContent.ctaButton}
           </Link>

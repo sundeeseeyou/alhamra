@@ -69,7 +69,7 @@ export default function ContactSection() {
   return (
     <section
       id="hubungi"
-      className="relative w-full py-20 bg-background overflow-hidden"
+      className="relative w-full py-12 md:py-20 bg-background overflow-hidden"
     >
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-x-1/2" />

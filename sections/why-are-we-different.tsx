@@ -5,7 +5,7 @@ export default function WhyAreWeDifferent() {
   return (
     <section
       id="berbeda"
-      className="w-full px-4 sm:px-6 md:px-12 lg:px-16 py-20 md:py-28"
+      className="w-full px-4 sm:px-6 md:px-12 lg:px-16 py-12 md:py-28"
     >
       <div className="mx-auto max-w-[1280px]">
         <div className="flex flex-col md:flex-row items-center gap-10 md:gap-14 lg:gap-20">
