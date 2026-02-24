@@ -5,12 +5,12 @@ export default function AboutUs() {
   return (
     <section
       id="tentang-kami"
-      className="w-full px-4 sm:px-6 md:px-12 lg:px-16 py-12 md:py-28"
+      className="w-full px-5 sm:px-6 md:px-12 lg:px-16 py-8 md:py-28"
     >
       <div className="mx-auto max-w-[1280px]">
         <div className="flex flex-col md:flex-row items-center gap-10 md:gap-14 lg:gap-20">
           {/* Image Side */}
-          <div className="w-full md:w-1/2 relative">
+          <div className="w-full md:w-1/2 relative order-last md:order-first">
             <div className="relative overflow-hidden shadow-xl shadow-primary/15 aspect-[4/3]">
               <img
                 src={AboutUsContent.image}
@@ -26,7 +26,7 @@ export default function AboutUs() {
           </div>
 
           {/* Text Side */}
-          <div className="w-full md:w-1/2 mt-6 md:mt-0">
+          <div className="w-full md:w-1/2 mt-6 md:mt-0 order-first md:order-last">
             <span className="text-[10px] md:text-sm font-bold uppercase tracking-[0.2em] text-primary">
               {AboutUsContent.label}
             </span>

@@ -3,10 +3,10 @@ import Navbar from "@/components/navbar";
 import favicon from "@/app/favicon.ico";
 
 export const metadata = {
-  title: "Al-Hamra | Trade and Development",
+  title: "Alhamra | Trade and Development",
   description: "Indonesia B2B E-commerce Platform",
   appleWebApp: {
-    title: "Al-Hamra | Trade and Development",
+    title: "Alhamra | Trade and Development",
     icon: favicon,
   },
 };

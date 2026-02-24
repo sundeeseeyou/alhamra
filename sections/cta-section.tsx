@@ -13,7 +13,7 @@ export default function CTASection() {
 
       <div className="relative z-10 mx-auto max-w-[1280px] px-6 md:px-12 lg:px-16 text-center">
         <div className="flex flex-col items-center gap-6 md:gap-8">
-          <h4 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+          <h4 className="text-2xl md:text-4xl font-bold text-white leading-tight">
             {CTAContent.title}
           </h4>
           <p className="text-white/80 text-lg md:text-xl">

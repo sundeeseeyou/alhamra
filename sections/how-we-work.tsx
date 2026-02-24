@@ -4,7 +4,7 @@ export default function HowWeWork() {
   return (
     <section
       id="bekerja"
-      className="relative flex flex-col justify-center items-center text-center bg-white w-full px-4 sm:px-6 md:px-12 lg:px-16 py-12 md:py-28"
+      className="relative flex flex-col justify-center items-center text-center bg-white w-full px-5 sm:px-6 md:px-12 lg:px-16 py-8 md:py-28"
     >
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
@@ -78,7 +78,7 @@ export default function HowWeWork() {
             {/* Diagram Label */}
             <div className="mt-16 md:mt-20">
               <span className="text-slate-600 font-bold tracking-widest uppercase text-xs md:text-sm">
-                Al-Hamra Loop
+                Alhamra Loop
               </span>
             </div>
           </div>
@@ -122,7 +122,7 @@ export default function HowWeWork() {
           <div className="inline-flex items-center gap-3 group cursor-pointer">
             <div className="h-[1px] w-10 bg-slate-200 group-hover:w-16 group-hover:bg-primary transition-all"></div>
             <span className="text-[10px] md:text-xs font-bold text-slate-400 group-hover:text-primary transition-colors tracking-[0.2em] uppercase">
-              Al-Hamra Strategy Ecosystem
+              Alhamra Strategy Ecosystem
             </span>
             <div className="h-[1px] w-10 bg-slate-200 group-hover:w-16 group-hover:bg-primary transition-all"></div>
           </div>

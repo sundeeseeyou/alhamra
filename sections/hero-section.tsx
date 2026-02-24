@@ -19,7 +19,7 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-[1440px] w-full px-6 md:px-12 lg:px-16">
-        <div className="max-w-4xl flex flex-col gap-6">
+        <div className="max-w-5xl flex flex-col gap-6">
           <h1 className="text-4xl/tight sm:text-5xl/tight md:text-[4rem]/tight text-start font-bold text-white">
             {heroContent.headline}{" "}
             <span className="inline-block bg-gradient-to-r from-secondary to-[#FFD700] bg-clip-text text-transparent">

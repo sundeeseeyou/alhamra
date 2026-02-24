@@ -55,6 +55,28 @@
   --fluid-display: clamp(2.25rem, 1.59rem + 2.65vw, 3.75rem);
 }
 
+html,
+body {
+  /* Prevent horizontal overflow on all screen sizes */
+  overflow-x: hidden;
+}
+
+html {
+  /* Lenis manages smooth scrolling — disable native smooth scroll to prevent conflict */
+  scroll-behavior: auto !important;
+}
+
+/* Offset anchor scroll targets by the height of the sticky navbar */
+section[id] {
+  scroll-margin-top: 60px;
+}
+
+@media (min-width: 768px) {
+  section[id] {
+    scroll-margin-top: 80px;
+  }
+}
+
 body {
   @apply bg-background text-foreground font-sans antialiased;
 }

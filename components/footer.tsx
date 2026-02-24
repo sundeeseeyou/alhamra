@@ -5,11 +5,11 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="px-4 md:px-16 lg:px-24 text-[13px] py-4 text-gray-500 bg-white">
+    <footer className="px-4 md:px-16 lg:px-24 text-base py-2 text-gray-500 bg-white">
       <div className="mx-auto max-w-[1440px]">
-        <div className="flex flex-col md:flex-row py-8 border-gray-100 md:justify-between max-md:items-center border-t gap-6 items-center">
+        <div className="flex flex-col md:flex-row py-8 border-gray-100 md:justify-between max-md:items-center gap-6 items-center">
           <p className="text-center">
-            © {currentYear} Al-Hamra | All rights reserved.
+            © {currentYear} Alhamra | All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <a

@@ -1,5 +1,5 @@
 // ============================================================
-// Al-Hamra — Website Content
+// Alhamra — Website Content
 // ============================================================
 // Edit semua teks website di file ini.
 // Setiap section punya object sendiri supaya mudah dicari.
@@ -34,7 +34,7 @@ export const heroContent = {
   highlightedText: "New-Generation of Market Centric",
   image:
     "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop",
-  imageAlt: "Al-Hamra professional team meeting in office",
+  imageAlt: "Alhamra professional team meeting in office",
 };
 
 // ----- ABOUT US SECTION -----
@@ -47,7 +47,7 @@ export const AboutUsContent = {
   ctaButton: "Pelajari Lebih",
   image:
     "https://images.unsplash.com/photo-1664575602276-acd073f104c1?q=80&w=2070&auto=format&fit=crop",
-  imageAlt: "Tim Al-Hamra berkolaborasi di coworking space modern",
+  imageAlt: "Tim Alhamra berkolaborasi di coworking space modern",
 };
 
 // ----- WHY WE DIFFERENT SECTION -----
@@ -77,7 +77,7 @@ export const WhyWeDifferentContent = {
   ctaButton: "Pelajari Lebih",
   image:
     "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop",
-  imageAlt: "Fokus kolaborasi tim profesional di Al-Hamra",
+  imageAlt: "Fokus kolaborasi tim profesional di Alhamra",
 };
 
 // --------- HOW WE WORK -----
@@ -129,7 +129,7 @@ export const HowWeWorkContent = {
         "Kami berorientasi pada ekosistem yang saling terintegrasi untuk pemenuhan kebutuhan setiap partner, dengan membangun jejaring dari tingkat bawah ke atas.",
     },
     {
-      title: "Market Shaping",
+      title: "Market Driving",
       items:
         "Kami bekerja dengan para partner ambisius yang berani mengambil resiko dan meninggalkan ketidakpastian untuk bertumbuh.",
     },
@@ -138,7 +138,7 @@ export const HowWeWorkContent = {
     "Melalui 3 komponen utama dan indikator turunannya. Kami memberikan analisa mendalam yang membantu melihat visibilitas dan mematangkan keputusan tanpa intervensi keputusan",
   ctaButton: "Pelajari Lebih",
   image: "/assets/alhamra-loop.png",
-  imageAlt: "Al-Hamra team collaboration",
+  imageAlt: "Alhamra team collaboration",
 };
 
 // ----- VISION & MISSION SECTION -----
@@ -158,7 +158,7 @@ export const VisionMissionContent = {
 
 // ----- CTA SECTION -----
 export const CTAContent = {
-  title: "Siap untuk melangkah lebih jauh bersama Al-Hamra?",
+  title: "Siap untuk melangkah lebih jauh bersama Alhamra?",
   subtitle:
     "Hubungi kami sekarang untuk konsultasi mendalam mengenai strategi pertumbuhan usaha Anda.",
   ctaButton: "Hubungi Kami",

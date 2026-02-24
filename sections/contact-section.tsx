@@ -76,14 +76,14 @@ export default function ContactSection() {
   return (
     <section
       id="hubungi"
-      className="relative w-full py-12 md:py-20 bg-background overflow-hidden"
+      className="relative w-full py-8 md:py-20 bg-background overflow-hidden"
     >
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/2 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-x-1/2" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl translate-x-1/3" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
+      <div className="relative z-10 mx-auto max-w-[1440px] px-5 md:px-12 lg:px-16">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
           {/* Text Content */}
           <div className="w-full lg:w-1/3 flex flex-col gap-6">

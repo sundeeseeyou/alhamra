@@ -17,8 +17,10 @@ const arimo = Arimo({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${arimo.variable}`}>
-      <LenisScroll />
-      <body>{children}</body>
+      <body>
+        <LenisScroll />
+        {children}
+      </body>
     </html>
   );
 }

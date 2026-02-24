@@ -1,9 +1,9 @@
 "use client";
 
-import { MenuIcon, XIcon, ChevronDown, Phone } from "lucide-react";
+import { MenuIcon, XIcon, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import logo from "@/app/alhamra-logo.png";
 import { navbarContent } from "@/data/content";
 
@@ -20,13 +20,66 @@ interface NavLink {
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
 
   const links: NavLink[] = navbarContent.links;
 
+  useEffect(() => {
+    const threshold = 10;
+    let lastScrollY = window.scrollY;
+
+    const updateNavbar = (scrolled: number, direction: number) => {
+      if (scrolled < 50) {
+        setIsVisible(true);
+      } else {
+        if (direction > 0) {
+          setIsVisible(false);
+          setIsOpen(false);
+        } else if (direction < 0) {
+          setIsVisible(true);
+        }
+      }
+    };
+
+    const handleScroll = (e: any) => {
+      // If the event is from Lenis, it will have 'scroll' and 'direction' properties
+      if (e && e.scroll !== undefined && e.direction !== undefined) {
+        updateNavbar(e.scroll, e.direction);
+      } else {
+        // Native scroll event fallback
+        const currentScrollY = window.scrollY;
+        const delta = currentScrollY - lastScrollY;
+
+        if (Math.abs(delta) > threshold) {
+          updateNavbar(currentScrollY, delta);
+          lastScrollY = currentScrollY;
+        }
+      }
+    };
+
+    // @ts-ignore
+    const lenis = window.lenis;
+
+    if (lenis) {
+      lenis.on("scroll", handleScroll);
+    } else {
+      window.addEventListener("scroll", handleScroll, { passive: true });
+    }
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (lenis) lenis.off("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <header className="sticky top-0 z-50 flex w-full items-center justify-between shadow-md  bg-white/90 px-4 py-3.5 backdrop-blur-md md:px-16 lg:px-8">
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 flex w-full items-center justify-between shadow-md bg-white/90 px-4 py-3.5 backdrop-blur-md md:px-16 lg:px-8 transition-transform duration-300 ease-in-out ${
+          isVisible ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
         <nav className="flex w-full items-center justify-between max-w-[1600px] mx-auto">
           <Link href="/">
             <Image src={logo} alt="logo" width={150} height={30} />
@@ -67,7 +120,7 @@ export default function Navbar() {
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between p-6 border-b">
+        <div className="flex items-center justify-between p-6">
           <Link href="/" onClick={() => setIsOpen(false)}>
             <Image src={logo} alt="logo" width={120} height={24} />
           </Link>
