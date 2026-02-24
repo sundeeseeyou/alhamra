@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { AboutUsContent } from "@/data/content";
+import Link from "next/link";
 
 export default function AboutUs() {
   return (
@@ -47,10 +48,13 @@ export default function AboutUs() {
               </p>
             ))}
 
-            <button className="mt-8 inline-flex items-center gap-2 rounded-full btn-primary py-3 px-8 text-white font-medium hover:opacity-90 hover:cursor-pointer active:scale-[0.98] transition-all duration-100 ease-in-out">
+            <Link
+              href="#hubungi"
+              className="mt-8 inline-flex items-center gap-2 rounded-full btn-primary py-3 px-8 text-white font-medium hover:opacity-90 hover:cursor-pointer active:scale-[0.98] transition-all duration-100 ease-in-out"
+            >
               <ArrowUpRight className="size-6" />
               <span>{AboutUsContent.ctaButton}</span>
-            </button>
+            </Link>
           </div>
         </div>
       </div>
