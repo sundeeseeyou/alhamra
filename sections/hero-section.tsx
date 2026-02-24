@@ -3,7 +3,7 @@ import { heroContent } from "@/data/content";
 
 export default function HeroSection() {
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-[80vh] md:min-h-[45rem] overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center min-h-[60vh] md:min-h-[50rem] overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0 w-full h-full">
         <Image
