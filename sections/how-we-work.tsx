@@ -66,7 +66,7 @@ export default function HowWeWork() {
                       <h4 className="text-[14px] sm:text-[16px] md:text-lg font-bold text-slate-800 leading-tight">
                         {item.title}
                       </h4>
-                      <span className="text-xs sm:text-sm text-slate-600 leading-snug">
+                      <span className="text-[10px] md:text-sm text-slate-600 leading-snug">
                         {item.items}
                       </span>
                     </div>
