@@ -1,0 +1,11 @@
+{
+  "user": "${FTP_USER}",
+  "password": "${FTP_PASSWORD}",
+  "host": "${FTP_HOST}",
+  "port": 21,
+  "localRoot": "./out",
+  "remoteRoot": "/public_html/",
+  "include": ["*", "**/*"],
+  "deleteRemote": false,
+  "sftp": false
+}

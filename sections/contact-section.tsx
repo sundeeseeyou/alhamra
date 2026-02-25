@@ -1,8 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useRef } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
+import { useState } from "react";
 import { contactContent } from "@/data/content";
 import {
   Mail,
@@ -19,7 +18,6 @@ export default function ContactSection() {
     "idle" | "loading" | "success" | "error"
   >("idle");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value.replace(/\D/g, ""); // Only numbers
@@ -32,13 +30,6 @@ export default function ContactSection() {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
-    const recaptchaValue = recaptchaRef.current?.getValue();
-
-    if (!recaptchaValue) {
-      alert("Mohon selesaikan Captcha terlebih dahulu.");
-      setStatus("idle");
-      return;
-    }
 
     // Basic validation for phone
     if (phoneNumber.length < 9) {
@@ -48,9 +39,6 @@ export default function ContactSection() {
     }
 
     try {
-      // Menambahkan g-recaptcha-response sesuai standar Formspree/reCAPTCHA
-      formData.append("g-recaptcha-response", recaptchaValue);
-
       const response = await fetch("https://formspree.io/f/mgolnbed", {
         method: "POST",
         body: formData,
@@ -65,7 +53,6 @@ export default function ContactSection() {
         setPhoneNumber("");
       } else {
         setStatus("error");
-        recaptchaRef.current?.reset();
       }
     } catch (error) {
       console.error(error);
@@ -252,17 +239,6 @@ export default function ContactSection() {
                       placeholder={contactContent.fields.message.placeholder}
                       className="w-full px-5 py-4 rounded-none bg-white border border-slate-300 focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all outline-none resize-none"
                     />
-                  </div>
-
-                  {/* reCAPTCHA Widget */}
-                  <div className="md:col-span-2 flex flex-col gap-2">
-                    <ReCAPTCHA
-                      ref={recaptchaRef}
-                      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
-                    />
-                    {/* <p className="text-[10px] text-slate-400">
-                      Input Site Key dapat dikelola di file .env.local
-                    </p> */}
                   </div>
 
                   {/* Submit Button */}

@@ -1,0 +1,11 @@
+{
+  "user": "${FTP_STAGING_USER}",
+  "password": "${FTP_STAGING_PASSWORD}",
+  "host": "${FTP_STAGING_HOST}",
+  "port": 21,
+  "localRoot": "./out",
+  "remoteRoot": "/public_html/",
+  "include": ["*", "**/*"],
+  "deleteRemote": false,
+  "sftp": false
+}
